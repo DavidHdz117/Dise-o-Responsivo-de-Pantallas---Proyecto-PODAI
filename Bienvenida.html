@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal UTHH</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        header img {
+            width: 100%;
+            height: auto;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #menu-toggle {
+            display: none;
+        }
+
+        .menu-toggle-label {
+            display: none;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            text-align: left;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 10px 0;
+            width: 100%;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 5px 10px;
+            text-align: center;
+        }
+
+        .menu a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-color: #dff0d8;
+            border: 1px solid #4cae4c;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 1000px; 
+            width: 90%; 
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        @media (max-width: 600px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 5px;
+                width: 100%;
+            }
+
+            .menu-toggle-label {
+                display: block;
+            }
+
+            #menu-toggle:checked ~ .menu {
+                display: flex;
+            }
+
+            .menu a {
+                margin: 5px 0;
+            }
+
+            main {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            footer {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="http://podai.uthh.edu.mx/imagenes/pagina/banner.jpg" alt="Banner UTHH">
+    </header>
+
+    <nav>
+        <input type="checkbox" id="menu-toggle">
+        <label class="menu-toggle-label" for="menu-toggle">☰ Menú</label>
+        <div class="menu">
+            <a href="#">Cerrar sesión</a>
+            <a href="#">Datos de usuario</a>
+            <a href="#">Consultar mis calificaciones</a>
+            <a href="#">Entrevista inicial</a>
+            <a href="#">Pagos</a>
+            <a href="#">Agenda</a>
+        </div>
+    </nav>
+
+    <main>
+        <h2>Bienvenido</h2>
+        <p><strong>JESÚS DAVID SALDAÑA HERNÁNDEZ</strong></p>
+        <p>ALUMNO DEL 4to. CUATRIMESTRE, GRUPO A</p>
+        <p>SEPTIEMBRE-DICIEMBRE 2024</p>
+    </main>
+
+    <footer>
+        <p>Carretera Huejutla - Chalahuiyapa S/N, C.P. 43000, Huejutla de Reyes, Hidalgo.</p>
+        <p>Teléfonos: 789 8962088 al 91</p>
+        <p>E-mail: rectoria@uthh.edu.mx</p>
+        <p>Universidad Tecnológica de la Huasteca Hidalguense</p>
+    </footer>
+</body>
+</html>

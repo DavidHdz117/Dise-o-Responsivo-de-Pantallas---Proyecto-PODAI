@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrevista Inicial - UTHH</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        header img {
+            width: 100%;
+            height: auto;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+
+        #menu-toggle {
+            display: none;
+        }
+
+        .menu-toggle-label {
+            display: none;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            text-align: left;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .menu a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            background-color: #f8f9fa;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .form-section {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .form-section h3 {
+            flex: 1 1 100%;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            flex: 1 1 calc(50% - 20px);
+            margin: 10px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .title-box {
+            background-color: #ffe499;
+            border-radius: 8px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                padding: 5px;
+            }
+
+            #menu-toggle:checked ~ .menu {
+                display: flex;
+            }
+
+            .menu-toggle-label {
+                display: block;
+            }
+
+            .menu a {
+                margin: 5px 0;
+            }
+
+            .form-section {
+                flex-direction: column;
+            }
+
+            .form-group {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="http://podai.uthh.edu.mx/imagenes/pagina/banner.jpg" alt="Banner UTHH">
+    </header>
+
+    <nav>
+        <input type="checkbox" id="menu-toggle">
+        <label class="menu-toggle-label" for="menu-toggle">☰ Menú</label>
+        <div class="menu">
+            <a href="#">Cerrar sesión</a>
+            <a href="#">Datos de usuario</a>
+            <a href="#">Consultar mis calificaciones</a>
+            <a href="#">Entrevista inicial</a>
+            <a href="#">Pagos</a>
+            <a href="#">Agenda</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="title-box">Entrevista Inicial</div>
+        <div class="form-section">
+            <h3>Datos del Alumno</h3>
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" value="JESÚS DAVID SALDAÑA HERNÁNDEZ" disabled>
+            </div>
+            <div class="form-group">
+                <label for="estado-civil">Estado Civil:</label>
+                <select id="estado-civil">
+                    <option>Soltero</option>
+                    <option>Casado</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="hijos">No. de hijos:</label>
+                <input type="number" id="hijos" min="0">
+            </div>
+            <div class="form-group">
+                <label for="direccion">Dirección durante tus estudios:</label>
+                <input type="text" id="direccion">
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email">
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h3>Datos Generales</h3>
+            <div class="form-group">
+                <label for="dom-tutor">Domicilio del padre o tutor:</label>
+                <input type="text" id="dom-tutor">
+            </div>
+            <div class="form-group">
+                <label for="tel-padre">Teléfono del padre:</label>
+                <input type="tel" id="tel-padre">
+            </div>
+            <div class="form-group">
+                <label for="emergencia">En caso de emergencia comunicarse con:</label>
+                <input type="text" id="emergencia">
+            </div>
+            <div class="form-group">
+                <label for="tel-emergencia">Teléfono:</label>
+                <input type="tel" id="tel-emergencia">
+            </div>
+            <div class="form-group">
+                <label for="dir-emergencia">Dirección:</label>
+                <input type="text" id="dir-emergencia">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Carretera Huejutla - Chalahuiyapa S/N, C.P. 43000, Huejutla de Reyes, Hidalgo.</p>
+        <p>Teléfonos: 789 8962088 al 91</p>
+        <p>E-mail: rectoria@uthh.edu.mx</p>
+        <p>Universidad Tecnológica de la Huasteca Hidalguense</p>
+    </footer>
+</body>
+</html>
